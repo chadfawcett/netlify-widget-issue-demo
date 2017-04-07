@@ -31,10 +31,14 @@
       }
     })
 
-    //  If you remove the CategoriesPreview, the admin interface will error out
+    //  This causes an error, while the documentation says it should not
+    //  require a preview component.
     //
     //  https://github.com/netlify/netlify-cms/issues/337
-    CMS.registerWidget('categories', CategoriesControl, CategoriesPreview);
+    CMS.registerWidget('categories', CategoriesControl);
+
+    //  Supplying a preview component resolves the error
+    // CMS.registerWidget('categories', CategoriesControl, CategoriesPreview)
   </script>
 </body>
 </html>
