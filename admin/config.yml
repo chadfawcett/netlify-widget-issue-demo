@@ -1,0 +1,17 @@
+backend:
+  name: github
+  repo: chadfawcett/netlify-widget-issue-demo
+
+media_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "_posts"
+    create: true
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Categories", name: "categories", widget: "categories" }
+      - { label: "Body", name: "body", widget: "markdown" }
